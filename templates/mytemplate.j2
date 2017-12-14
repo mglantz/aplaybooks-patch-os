@@ -4,9 +4,9 @@
         "{{ disk.id }}":
         {
           "datastore": "{{ disk.datastore }}",
-          "size_gb": "{{ disk.gb }}",
-          "thin": "{{ disk.thin }}",
-          "eager_zero": "{{ disk.eager_zero }}"
+          "size_gb": "{{ size }}",
+          "thin": "thin",
+          "eager_zero": "yes"
         }
       },
       {% endfor %}
