@@ -1,0 +1,16 @@
+      "volumes_attributes":
+      {% for disk in disks %}
+      {
+        "{{ disk.id }}":
+        {
+          "datastore": "{{ disk.datastore }}",
+          "size_gb": "{{ disk.gb }}",
+          "thin": "{{ disk.thin }}",
+          "eager_zero": "{{ disk.eager_zero }}"
+        }
+      },
+      {% endfor %}
+      "scsi_controller_type": "VirtualLsiLogicController",
+      "image_id": "some/stuff-1.0",
+      "start": "1"
+    }
